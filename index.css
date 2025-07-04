@@ -202,6 +202,7 @@ a:hover {
     border-radius: 10px;    
 } 
 
+/* Todo codigo abaixo Responsivel para Celular*/
 @media screen and (max-width: 768px) {
     body {
         font-size: 3vw;
@@ -219,11 +220,14 @@ a:hover {
     ul {
         font-size: 3vw;        
     }
+
     .container {
         grid-template-columns: 25vw 25vw 25vw 25vw ;
-        grid-template-rows: 5vw 4vw 6vw 18vw   ;        
+        grid-template-rows: 6vw 4vw 6vw 18vw   ;        
+    }  
+    .box1{
+        font-size: 4vw;
     }
-
     /*menu Nav */
     .menu{      
         font-size: 2vw;  
@@ -283,8 +287,14 @@ a:hover {
         grid-row-start: 18;
         grid-row-end: 25;
         margin-left: 5%;  
-    }
-    
+    }   
+    #LeiaMais{
+        font-size: 2vw;
+        float:right;
+        border: none;     
+        border-radius: 10px;
+        margin-bottom: 20px;    
+}  
         
     /* Contato */
     .box8{
