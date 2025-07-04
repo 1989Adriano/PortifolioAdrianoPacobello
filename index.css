@@ -36,7 +36,7 @@ p {
     display:grid;
     text-align: center;    
     grid-template-columns:19.8vw 19.8vw 19.8vw 19.8vw ;
-    grid-template-rows: 5vw 3vw 3vw 4vw;   
+    grid-template-rows: 5vw 3vw 30vw 15vw 10vw;    
 }
 
 /*    Titulo/Nome    */
@@ -50,14 +50,20 @@ p {
 }
 
 /*    Menu de Navegação Principal    */
-.box2 {    
+.box2 {      
     grid-column-start: 1;
     grid-column-end: 6;
     grid-row-start: 2;
-    grid-row-end: 3;     
-    justify-content:space-evenly;      
-    font-size: 1vw;      
-    background-color: white;       
+    grid-row-end: 3;         
+}
+
+.menu{
+    width: 100%;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+    font-size: 1vw; 
+    background-color: white;  
+    justify-content:space-evenly;  
 }
 
 /*  Informaçoes ao lado da foto */
@@ -65,17 +71,17 @@ p {
     justify-content: center;
     grid-column-start: 3;
     grid-column-end: 6;
-    grid-row-start: 4;
+    grid-row-start: 3;
     grid-row-end: 17;  
-    margin-right: 10%;
-    margin-top: 5%;    
+    margin-right: 5%;
+    margin-top: 8%;    
 }
 
 /*  container img 1 */
 .box4 {    
     grid-column-start: 1;
     grid-column-end: 3;
-    grid-row-start: 4;
+    grid-row-start: 3;
     grid-row-end: 17;  
 }
 
@@ -83,20 +89,18 @@ p {
 #img1 {  
     width: 70%;   
     background-color:rgba(51, 30, 11, 0.722);
-    margin-top: 3%;       
+    margin-top: 8%;       
 }
 
 /*    Trabalho */
 .box5 {
     grid-column-start: 1;
     grid-column-end: 6;
-    grid-row-start:19;
-    grid-row-end: 20;
-    margin-top: 2%;
-}
-
-#trabalho {    
-    padding: 4%;    
+    grid-row-start: 4;
+    grid-row-end: 4;
+    margin-top: 7%;
+    margin-right: 5%;
+    margin-left: 5%;
 }
 
  /* TEXTO HOBBIES E FORMAÇÃO*/    
@@ -110,20 +114,20 @@ p {
 .box6 {
     grid-column-start: 1;
     grid-column-end: 2;
-    grid-row-start:20;
-    grid-row-end: 20;
+    grid-row-start:6;
+    grid-row-end: 7;
 }
 
 #hobbie {    
-        margin-left: 20%;         
+    margin-left: 20%;         
 }  
 
 /*Formação*/
 .box7 {
     grid-column-start: 2;
     grid-column-end: 3;
-    grid-row-start:20;
-    grid-row-end: 20;
+    grid-row-start:6;
+    grid-row-end: 7;   
 }
 
 #formacao{    
@@ -131,51 +135,80 @@ p {
 }
 
 /* Contato */
-.box8 {   
-    justify-content:space-between  ; 
-    grid-column-start: 1;
+.box8 {      
+    grid-column-start: 3;
     grid-column-end: 6;
-    grid-row-start:21;
-    grid-row-end: 21; 
-   
-}
-#contato {
-    font-size: 1.1vw;    
-    justify-content:space-evenly;     
+    grid-row-start:8;
+    grid-row-end: 10;  
+    text-align: center;
+    justify-content: space-between;
+    flex-flow: wrap ;
+    padding-top: 9%;
+    margin-right: 5%;        
 }
 
 /*Sobre mim */
 .box9 {
     grid-column-start: 3;
     grid-column-end: 6;
-    grid-row-start:20;
-    grid-row-end: 20;
-    margin-right:5%;
-    margin-left: 5%;  
+    grid-row-start:6;
+    grid-row-end: 7;
+    margin-right:5%;     
 }
-
+#leiamais{
+    font-size: 3vw;
+    padding: 2vw;
+}
 /* Tfoot/ rodape */
 .box10 {    
     grid-column-start: 1;
     grid-column-end: 6;
-    grid-row-start:27;
-    grid-row-end: 29;
+    grid-row-start:8;
+    grid-row-end: 9;
     background-color: white;
 }
 
 #rodape {
-    font-size: 1.1vw;
-    margin-right: vw;
-    justify-content:space-between;     
+    font-size: 1.3vw;    
+    justify-content:space-between; 
+    padding: 1vw;   
 }
 
+/*   Referente  Envie sua menssagem   */
+.box11{
+    grid-column-start:1;
+    grid-column-end: 4;
+    grid-row-start: 8;
+    grid-row-end: 9;   
+   
+}
+
+/*   Referente  Envie sua menssagem   */
+#mensagem,label ,input,textarea {    
+    margin-left: 10%;
+    margin-top: 0.3vw;
+    display: flex;          
+    font-size: 1vw;   
+    border: none;     
+    border-radius: 10px;     
+}
+
+/*   Referente ao botão Envie sua menssagem   */ 
+.button{ 
+    font-size: 0.8vw; 
+    float: center;    
+    margin-top: 2%; 
+    border: none;     
+    border-radius: 10px;    
+  }
+  
  /* RELACIOADO AO PASSAR EM CIMA DOS LINKS MUDAR DE COR*/
 a,        
 a:link {
     color:  rgba(51, 30, 11, 0.722);
     text-decoration: none;
     text-decoration-color: black;
-    padding: 0.8vw 1vw;
+    padding: 0.6vw 1vw;
     border: none;
 }
 a:visited{
@@ -194,8 +227,119 @@ a:hover {
  /*BOTÃO SAIBA MAIS */
 #LeiaMais{
     padding: 0.5vw;
-    font-size: 0.6vw;
+    font-size: 0.8vw;
     float:center;
     border: none;     
     border-radius: 10px;    
 } 
+
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 3vw;
+        background-color: rgb(80, 107, 79); 
+    }
+    h1 {
+        font-size: 4vw;
+    }
+    h2{
+        font-size: 5vw;
+    }   
+    
+    ul{
+        font-size: 2vw;
+        
+    }
+    .container {
+        grid-template-columns: 20vw 20vw 20vw 20vw 20vw;
+        grid-template-rows: 5vw 4vw 6vw 4vw 12vw 10vw 10vw ;        
+    }
+    
+    .menu{        
+        font-size:2vw; 
+        justify-content: center;                      
+    }  
+    
+    /* Imagem Homem */
+    #img1{        
+        margin-top: 25%;
+        margin-left: 80%;
+        width: 80%;        
+        background-color: rgb(65, 88, 54);
+    }
+
+    /*  Informaçoes ao lado da foto */
+    .box3 {
+        justify-content: center;
+        grid-column-start: 1;
+        grid-column-end: 6;
+        grid-row-start: 7;
+        grid-row-end: 10;  
+        margin-right: 5%;
+        margin-left: 5%;
+        margin-top: 25%;         
+    }
+
+    /*    Trabalho */
+    .box5{
+        grid-column-start: 1;
+        grid-column-end: 6;
+        grid-row-start: 10;
+        grid-row-end: 11;  
+        margin-top: 10%;
+    } 
+
+    /*Hobbie*/
+    .box6 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 12;
+        grid-row-end: 17;  
+        font-size: 4vw;
+    }
+    /*Formação*/
+    .box7 {
+        grid-column-start: 3;
+        grid-column-end: 6;
+        grid-row-start: 12;
+        grid-row-end:17;  
+        font-size: 4vw;
+        margin-right:5%;
+    }
+
+    /* Sobre mim */
+    .box9 {
+        grid-column-start: 1;
+        grid-column-end: 6;
+        grid-row-start: 18;
+        grid-row-end: 25;
+        margin-left: 5%;  
+    }
+    
+        
+    /* Contato */
+    .box8{
+        grid-column-start: 1;
+        grid-column-end: 6;
+        grid-row-start: 25;
+        grid-row-end: 26;  
+        text-align: center;
+        justify-content: space-between;
+        flex-flow: wrap ;
+                     
+    } 
+
+    /* Tfoot/ rodape */
+   .box10 {
+        grid-column-start: 1;
+        grid-column-end: 6;
+        grid-row-start: 18;
+        grid-row-end: 25;  
+        background-color: white;
+    }
+
+    #rodape {
+        font-size: 2vw;    
+        justify-content:center; 
+        padding: 2vw;    
+    }
+}

@@ -20,7 +20,7 @@
         <!-- Menu de Navegação Principal -->    
         <div class="box2">
             <nav>          
-                <ul class="box2">   
+                <ul class="menu">   
                     <li><a href="#contato">Contato</a></li>                
                     <li><a href="#hobbie">Hobbies</a></li> 
                     <li><a href="#formacao">Formação</a></li>                             
@@ -131,18 +131,40 @@
         </div>
 
          <!-- Texto Formação -->  
-        <div class="box8">
-            <section id="contato">  <!-- id para linkar ao botão Contato -->   
+        <div  class="box8">
+            <section >  <!-- id para linkar ao botão Contato -->   
                 
-                <h1>Contato:</h1>
+                <h1 id="contato">Contato:</h1>
 
-                <ul id="contato">
-                    <li>Whatsapp: (19) 98173-2360</li> 
-                    <li>email: adrianopacobello1@gmail.com</li>
-                    <li>email: adrianopacobello@outlook.com.br</li> 
+                <ul class="box8">
+                    <li>Whatsapp:<br>(19) 98173-2360</li>                     
+                    <li>email:<br>adrianopacobello1@gmail.com</li>
+                    <li>email:<br>adrianopacobello@outlook.com.br</li> 
                 </ul>
-
+                
             </section>
+        </div>
+
+        <div class="box11">
+            <section>
+
+                <h1>Entre em Contato:</h1>
+
+                <form id="menssagem" action="https://adrianopacobello@outlook.com.br" method="post">
+                    <label for="nome">Nome:</label>
+                    <input name="nome" type="text" placeholder="Digite seu nome" required>
+                    <br>
+                    <label for="email">Email:</label>
+                    <input name="email" type="email" placeholder="Digite seu email" required>                
+                    <br>
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea name="mensagem" rows="1" cols="30" placeholder="Digite sua mensagem"></textarea>
+
+                    <button class="button"type="submit">Enviar</button>
+                </form>
+            </section>
+        </div>     
+
         </div>
 
     <!-- menu inferior -->
