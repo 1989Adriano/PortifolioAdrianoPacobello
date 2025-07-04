@@ -136,15 +136,12 @@ p {
 
 /* Contato */
 .box8 {      
-    grid-column-start: 3;
+    grid-column-start: 1;
     grid-column-end: 6;
-    grid-row-start:8;
-    grid-row-end: 10;  
-    text-align: center;
+    grid-row-start:7;
+    grid-row-end: 7;   
     justify-content: space-between;
-    flex-flow: wrap ;
-    padding-top: 9%;
-    margin-right: 5%;        
+    flex-flow: wrap ;        
 }
 
 /*Sobre mim */
@@ -173,34 +170,6 @@ p {
     justify-content:space-between; 
     padding: 1vw;   
 }
-
-/*   Referente  Envie sua menssagem   */
-.box11{
-    grid-column-start:1;
-    grid-column-end: 4;
-    grid-row-start: 8;
-    grid-row-end: 9;   
-   
-}
-
-/*   Referente  Envie sua menssagem   */
-#mensagem,label ,input,textarea {    
-    margin-left: 10%;
-    margin-top: 0.3vw;
-    display: flex;          
-    font-size: 1vw;   
-    border: none;     
-    border-radius: 10px;     
-}
-
-/*   Referente ao botão Envie sua menssagem   */ 
-.button{ 
-    font-size: 0.8vw; 
-    float: center;    
-    margin-top: 2%; 
-    border: none;     
-    border-radius: 10px;    
-  }
   
  /* RELACIOADO AO PASSAR EM CIMA DOS LINKS MUDAR DE COR*/
 a,        
@@ -238,45 +207,47 @@ a:hover {
         font-size: 3vw;
         background-color: rgb(80, 107, 79); 
     }
-    h1 {
+
+    h1 {           
         font-size: 4vw;
     }
+
     h2{
-        font-size: 5vw;
+        font-size: 3vw;
     }   
     
-    ul{
-        font-size: 2vw;
-        
+    ul {
+        font-size: 3vw;        
     }
     .container {
-        grid-template-columns: 20vw 20vw 20vw 20vw 20vw;
-        grid-template-rows: 5vw 4vw 6vw 4vw 12vw 10vw 10vw ;        
+        grid-template-columns: 25vw 25vw 25vw 25vw ;
+        grid-template-rows: 5vw 4vw 6vw 18vw   ;        
     }
-    
-    .menu{        
-        font-size:2vw; 
-        justify-content: center;                      
+
+    /*menu Nav */
+    .menu{      
+        font-size: 2vw;  
+        justify-content: center;                             
     }  
     
     /* Imagem Homem */
     #img1{        
-        margin-top: 25%;
-        margin-left: 80%;
+        margin-top: 10%;
+        margin-left: 60%;
         width: 80%;        
         background-color: rgb(65, 88, 54);
     }
 
     /*  Informaçoes ao lado da foto */
-    .box3 {
+    .box3 {      
         justify-content: center;
         grid-column-start: 1;
-        grid-column-end: 6;
+        grid-column-end: 5;
         grid-row-start: 7;
-        grid-row-end: 10;  
+        grid-row-end: 10; 
+        margin-top: 27%;   
         margin-right: 5%;
-        margin-left: 5%;
-        margin-top: 25%;         
+        margin-left: 5%;            
     }
 
     /*    Trabalho */
@@ -284,8 +255,7 @@ a:hover {
         grid-column-start: 1;
         grid-column-end: 6;
         grid-row-start: 10;
-        grid-row-end: 11;  
-        margin-top: 10%;
+        grid-row-end: 11;         
     } 
 
     /*Hobbie*/
@@ -323,9 +293,7 @@ a:hover {
         grid-row-start: 25;
         grid-row-end: 26;  
         text-align: center;
-        justify-content: space-between;
-        flex-flow: wrap ;
-                     
+        display: inline;                 
     } 
 
     /* Tfoot/ rodape */
@@ -338,7 +306,7 @@ a:hover {
     }
 
     #rodape {
-        font-size: 2vw;    
+        font-size: 3vw;    
         justify-content:center; 
         padding: 2vw;    
     }
