@@ -223,11 +223,12 @@ a:hover {
     }
       
     .box1{
-        font-size: 3vw;
+        font-size: 4.2vw;
     }
+
     /*menu Nav */
     .menu{      
-        font-size: 2vw; 
+        font-size: 3vw; 
         padding-left: 2vw; 
         justify-content: center;                                  
     } 
