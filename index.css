@@ -230,6 +230,7 @@ a:hover {
     .menu{      
         font-size: 3vw; 
         padding-left: 2vw; 
+        padding: 2vw;
         justify-content: center;                                  
     } 
 
@@ -242,7 +243,8 @@ a:hover {
     }
    
     #img1{            
-        width: 50%;        
+        width: 50%;
+        margin-top: 3%;        
         background-color: rgb(65, 88, 54);
     }
 
