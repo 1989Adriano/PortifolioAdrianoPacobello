@@ -36,7 +36,7 @@ p {
     display:grid;
     text-align: center;    
     grid-template-columns:19.8vw 19.8vw 19.8vw 19.8vw ;
-    grid-template-rows: 5vw 3vw 25vw 15vw 10vw;    
+    grid-template-rows: 5vw 3vw 25vw 15vw 12vw;    
 }
 
 /*    Titulo/Nome    */
@@ -290,7 +290,10 @@ a:hover {
         grid-row-start: 18;
         grid-row-end: 25;
         margin-left: 5%;  
+        margin-right: 5%;
     }   
+    
+    /*Botao sobre min/Leia mais */
     #LeiaMais{
         font-size: 2vw;
         float:right;
