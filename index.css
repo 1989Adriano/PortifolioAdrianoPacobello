@@ -337,34 +337,40 @@ h1.box1:hover {
 /* Responsividade Desktop */
 @media (min-width: 1024px) {
     body {
-        height: 100vh;
-        overflow: hidden;
+        height: auto;
+        overflow-y: auto;
     }
 
     .container {
-        height: 100%;
+        height: auto;
         grid-template-columns: 1fr 300px; /* Coluna 1 flexível, Coluna 2 fixa (Sidebar) */
         grid-template-rows: auto 1fr auto; /* Retoma a estrutura fixa de 3 linhas */
         padding-bottom: 0; /* Remove padding do menu mobile */
     }
 
     /* Itens de largura total */
-    .box1, .box2, .box10 {
+    .box1, .box2 {
         grid-column: 1 / -1;
+    }
+
+    .box10 {
+        grid-column: 1 / -1;
+        width: 100vw; /* Ocupa toda a largura da janela */
+        margin-left: calc(50% - 50vw); /* Centraliza e puxa para as bordas */
     }
 
     /* Sidebar (Imagem + Contato) */
     .box4 { 
         grid-column: 2 / 3; 
         grid-row: 2; 
-        height: 100%;
-        overflow-y: auto;
+        height: auto;
+        align-self: start; /* Evita que a sidebar estique e cria espaço vazio */
     }
 
     /* Conteúdo Principal (Texto, Trabalho, Hobbies, etc) */
     .main-carousel { 
         grid-column: 1 / 2; 
-        height: 100%;
+        height: auto;
     }
 
     /* Sobre Mim Lado a Lado */
