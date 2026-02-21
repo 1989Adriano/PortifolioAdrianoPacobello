@@ -356,21 +356,23 @@ h1.box1:hover {
 
     .box10 {
         grid-column: 1 / -1;
+        width: 100vw;
+        margin-left: calc(50% - 50vw);
     }
 
     /* Sidebar (Imagem + Contato) */
     .box4 { 
         grid-column: 2 / 3; 
         grid-row: 2; 
-        height: 70vh; /* Altura fixa e igual para ambos (Sidebar e Carrossel) */
-        overflow-y: auto;
+        height: auto;
+        overflow-y: visible;
     }
 
     /* Conteúdo Principal (Texto, Trabalho, Hobbies, etc) */
     .main-carousel { 
         grid-column: 1 / 2; 
-        height: 70vh; /* Altura fixa e igual para ambos */
-        overflow-y: auto;
+        height: auto;
+        overflow-y: visible;
     }
 
     /* Sobre Mim Lado a Lado */
