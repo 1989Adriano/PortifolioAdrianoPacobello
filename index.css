@@ -49,9 +49,7 @@ ul { list-style: none; }
     grid-template-rows: auto; /* No mobile, deixa os itens empilharem naturalmente */
     gap: 2rem;
     max-width: 1400px;
-    margin-top: 2rem;
-   
-   
+    margin-top: 2rem;   
     margin: 0 auto;
     background-color: transparent;
     padding-bottom: 80px; /* Espaço para o menu inferior no mobile */
@@ -174,7 +172,7 @@ h1.box1:hover {
     height: auto; /* Permite que a altura seja ajustada proporcionalmente */
     object-fit: cover;
     border-radius: 10px;
- box-shadow: var(--shadow);
+    box-shadow: var(--shadow);
 }
 
 .box3 h2, .box5 h1, .box9 h1 { font-weight: 800; font-size: 2.4rem;
@@ -223,12 +221,10 @@ h1.box1:hover {
 .box3, .box5, .box6, .box7, .box9 { padding: 1.5rem;
     order: 1; /* Garante que o box3 seja sempre o primeiro */
     background-color: var(--card-bg-color);
-    border-radius: 12px;
-   
+    border-radius: 12px;   
     display: flex;
     flex-direction: column;
 }
-
 
 /* Layout Sobre Mim */
 .sobre-container {    
@@ -282,7 +278,6 @@ h1.box1:hover {
     list-style: none;
 }
 
-
 .carousel-list li {
     flex: 1 1 200px; /* Flexível para preencher espaço */
     max-width: 300px;
@@ -315,7 +310,7 @@ h1.box1:hover {
     background-color: #111;
     color: var(--white);
     padding: 0.8rem; /* Reduz padding para economizar espaço */
-    margin-top: 70px;
+    margin-top: 30px;
     width: 100%; /* Garante que o footer ocupe toda a largura */
 }
 
@@ -333,25 +328,6 @@ h1.box1:hover {
 #rodape a:hover {
     color: var(--white);
 }
-
-/* Media Query para Celular */
-@media (max-width: 767px) {
-    .container {
-        grid-template-columns: 1fr; /* Uma coluna */
-    }
-
-    .box4 {
-        grid-column: 1; /* Coloca embaixo do nome */
-        grid-row: auto;
-    }
-
-
-    .main-carousel {
-        grid-column: 1;
-        grid-row: auto;
-    }
-}
-
 
 /* Media Query para Desktop */
 @media (min-width: 1024px) {    
@@ -371,7 +347,6 @@ h1.box1:hover {
         align-items: start;
     }
 
-
     /* Sidebar (Imagem + Contato) */
     .box4 {        
         grid-column: 2 / 3; 
@@ -380,15 +355,14 @@ h1.box1:hover {
         overflow-y: auto;
     }
 
- /* Conteúdo Principal (Texto, Trabalho, Hobbies, etc) */
+    /* Conteúdo Principal (Texto, Trabalho, Hobbies, etc) */
     .main-carousel {        
         grid-column: 1 / 2;
         grid-row: 1;        
-        min-height: 50vh;
+        min-height: 60vh;
         height: auto; /* Ajusta automaticamente a altura */
         display: flex;        
-        padding: 1.5rem;        
-        justify-content: center;
+        padding: 1rem;        
         align-items: stretch; /* Alinha verticalmente os itens */
     }
     .sobre-container {
