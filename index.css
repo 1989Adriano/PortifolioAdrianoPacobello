@@ -342,22 +342,22 @@ h1.box1:hover {
     .container {
         height: auto;
         grid-template-columns: 1fr 300px; /* Carrossel na esquerda, Sidebar na direita */
-        grid-template-rows: 1fr; /* Apenas uma linha, já que menu e footer estão fora */
+        grid-template-rows: 1fr;
         padding-bottom: 0; /* Remove padding do menu mobile */
         align-items: start;
     }
 
     /* Sidebar (Imagem + Contato) */
     .box4 { 
-        grid-column: 2 / 3; 
-        grid-row: 1; /* Move para a primeira linha para alinhar com o carrossel */
-        height: 70vh; /* Aumenta a altura para ocupar mais espaço na tela */
+        grid-column: 2 / 3;
+        grid-row: 1;
+        height: 85vh;
         overflow-y: auto;
     }
 
     /* Conteúdo Principal (Texto, Trabalho, Hobbies, etc) */
     .main-carousel { 
-        grid-column: 1 / 2; 
+        grid-column: 1 / 2;
         grid-row: 1; /* Garante que fique na mesma linha da sidebar */
         height: 70vh; /* Aumenta a altura para ocupar mais espaço na tela */
         overflow-y: auto;
