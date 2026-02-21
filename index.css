@@ -435,5 +435,29 @@ h1.box1:hover {
         height: 160px;
         margin-bottom: 1rem;
     }
+     /* Faz o header grudar no topo e diminuir a altura */
+    .box2 {
+        position: sticky;
+        top: 0;
+        padding: 0.5rem; /* Reduz o padding original */
+        transition: all 0.4s ease-in-out;
+        min-height: 60px;
+    }
+
+    /* Faz o seu NOME diminuir de tamanho e ocupar menos espaço vertical */
+    h1.box1 {
+        font-size: 1.2rem; /* Diminui de 1.8rem para 1.2rem */
+        padding: 0.5rem 0;
+        margin: 0;
+        transition: font-size 0.3s ease;
+        white-space: nowrap; /* Impede que o nome quebre em duas linhas */
+        overflow: hidden;
+        text-overflow: ellipsis; /* Se for muito grande, coloca "..." */
+    }
+
+    /* Ajuste para o container não "bater" no header minimizado */
+    .container {
+        margin-top: 20px;
+    }
 }
 
