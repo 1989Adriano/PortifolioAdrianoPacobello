@@ -339,6 +339,7 @@ h1.box1:hover {
     body {
         height: auto;
         overflow-y: auto;
+        overflow-x: hidden; /* Evita barra de rolagem horizontal causada pelo footer 100vw */
     }
 
     .container {
@@ -356,7 +357,7 @@ h1.box1:hover {
     .box10 {
         grid-column: 1 / -1;
         width: 100vw; /* Ocupa toda a largura da janela */
-        margin-left: calc(50% - 50vw); /* Centraliza e puxa para as bordas */
+        margin-left: calc(50% - 50vw); /* Garante que o footer pegue de ponta a ponta */
     }
 
     /* Sidebar (Imagem + Contato) */
@@ -371,6 +372,8 @@ h1.box1:hover {
     .main-carousel { 
         grid-column: 1 / 2; 
         height: auto;
+        align-self: start; /* Impede que o container estique para a altura da sidebar */
+        align-items: flex-start; /* Impede que os cards estiquem para a altura do maior card */
     }
 
     /* Sobre Mim Lado a Lado */
