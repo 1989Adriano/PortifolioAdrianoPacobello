@@ -1,330 +1,359 @@
+/* Reset e Variáveis */
 * {
     box-sizing: border-box;
-}   
-
-body {    
-    font-size: 1.2vw;     
-    margin-top: auto; 
-    margin-right: 0%; 
-    margin-left: 0%;      
-    background-color: rgba(51, 36, 21, 0.722);          
+    margin: 0;
+    padding: 0;
 }
 
-ul { 
-    display: flex;     
-    list-style: none; 
-    margin-right: 4vw;      
+:root {
+    --bg-color: #1a1a1a;         /* Fundo principal (cinza muito escuro) */
+    --card-bg-color: #2c2c2c;    /* Fundo dos cards (cinza escuro) */
+    --accent-color: #00bfa5;      /* Verde-água/Teal vibrante para destaque */
+    --text-color: #e0e0e0;        /* Cinza claro para textos */
+    --primary-color: #00bfa5;      /* Mantendo consistência com accent */
+    --white: #ffffff;
+    --shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
 }
 
-h1 {       
-    font-size:2vw ;   
-    color:white;     
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    font-size: 16px;
+    min-height: 100dvh; /* Garante altura mínima, mas deixa crescer se precisar */
 }
 
-h2 {   
-    text-align: center; 
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 2vw;
-    color:white;
- }
-
-p {        
-    text-align: justify;                    
+/* Tipografia */
+h1, h2, h3 {
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+    text-align: center;
 }
 
+h1 { font-size: 2.2rem; }
+h2 { font-size: 1.6rem; }
+p { margin-bottom: 1rem; text-align: justify; font-size: 1rem; }
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+ul { list-style: none; }
+
+/* Layout Principal */
 .container {
-    display:grid;
-    text-align: center;    
-    grid-template-columns:19.8vw 19.8vw 19.8vw 19.8vw ;
-    grid-template-rows: 5vw 3vw 25vw 15vw 12vw;    
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto; /* No mobile, deixa os itens empilharem naturalmente */
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: transparent;
+    padding-bottom: 0;
 }
 
-/*    Titulo/Nome    */
-.box1 {    
-    grid-column-start: 1;
-    grid-column-end: 6;
-    grid-row-start: 1;
-    grid-row-end: 1;  
-    font-size:2.5vw;     
-    color:rgba(51, 30, 11, 0.722);     
+/* Header */
+.box1 {
+    background-color: transparent;
+    color: var(--text-color);
+    padding: 1rem 1rem; /* Reduz padding para economizar espaço */
+    text-align: center;
 }
 
-/*    Menu de Navegação Principal    */
-.box2 {      
-    grid-column-start: 1;
-    grid-column-end: 6;
-    grid-row-start: 2;
-    grid-row-end: 3;         
+/* Reset específico para o h1 que tem a classe box1 também */
+h1.box1 {
+    background: none;
+    padding: 1rem 0;
+    margin-bottom: 0;
+    color: var(--accent-color);
+    font-weight: 800;
+    letter-spacing: 1px;
+    transition: text-shadow 0.3s ease-in-out;
+    font-size: 1.8rem;
 }
 
-.menu{
-    width: 100%;
-    padding-top: 1vw;
-    padding-bottom: 1vw;
-    font-size: 1vw; 
-    background-color: white;  
-    justify-content:space-evenly;  
+h1.box1:hover {
+    text-shadow: 0 0 8px var(--accent-color), 0 0 2px var(--white);
 }
 
-/*  Informaçoes ao lado da foto */
-.box3 {   
-    justify-content: center;
-    grid-column-start: 3;
-    grid-column-end: 6;
-    grid-row-start: 3;
-    grid-row-end: 5;  
-    margin-right: 5%;
-    margin-top: 10%;     
-}
-
-/*  container img 1 */
-.box4 {    
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 3;
-    grid-row-end: 5; 
-    margin-top: 8%;    
-}
-
-/* Imagem Homem */
-#img1 {  
-    width: 70%;   
-    background-color:rgba(51, 30, 11, 0.722);     
-}
-
-/*    Trabalho */
-.box5 {
-    grid-column-start: 1;
-    grid-column-end: 6;
-    grid-row-start: 5;
-    grid-row-end: 6;   
-    margin-right: 5%;
-    margin-left: 5%;    
-}
-
- /* TEXTO HOBBIES E FORMAÇÃO*/    
-#lista{  
-    text-align: left;
-    display: inline;        
-    list-style-type: square;  
-}
-
-/*Hobbie*/
-.box6 {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start:6;
-    grid-row-end: 7;    
-}
-
-#hobbie {    
-    margin-left: 20%;         
-}  
-
-/*Formação*/
-.box7 {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start:6;
-    grid-row-end: 7;  
-    margin-left: 2vw;    
-}
-
-#formacao{    
-    margin-left: 10%;    
-}
-
-/* Contato */
-.box8 {      
-    grid-column-start: 1;
-    grid-column-end: 6;
-    grid-row-start:7;
-    grid-row-end: 7;   
+/* Navegação */
+.box2 {
+    background-color: var(--card-bg-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: var(--shadow);
+    display: flex;
     justify-content: space-between;
-    flex-flow: wrap ;        
+    align-items: center;
+    padding: 0 2rem;
+    flex-wrap: wrap;
 }
 
-/*Sobre mim */
-.box9 {
-    grid-column-start: 3;
-    grid-column-end: 6;
-    grid-row-start:6;
-    grid-row-end: 7;
-    margin-right: 2vw;
-    margin-left: 2vw;    
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 1rem;
 }
-#leiamais{
-    font-size: 3vw;
-    padding: 2vw;
+
+.menu li a {
+    color: var(--text-color);
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
 }
-/* Tfoot/ rodape */
-.box10 {    
-    grid-column-start: 1;
-    grid-column-end: 6;
-    grid-row-start:8;
-    grid-row-end: 9;
-    background-color: white;
+
+.menu li a:hover {
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+}
+
+/* Seção (Imagem e Texto) */
+.box4 {
+    /* Agora atua como Sidebar */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+    background: linear-gradient(145deg, #252525, #1e1e1e);
+    border: 1px solid var(--accent-color);
+    border-radius: 16px;
+    gap: 1.5rem;
+    box-shadow: 0 8px 25px rgba(0, 191, 165, 0.15);
+}
+
+#img1 {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid var(--accent-color);
+    box-shadow: var(--shadow);
+}
+
+/* Estilo do Contato */
+.box-contact {
+    text-align: center;
+    width: 100%;
+    padding: 0;
+}
+
+.box-contact ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    font-size: 0.95rem;
+    word-break: break-word;
+}
+
+/* Imagem Secundária (Sobre Mim) */
+#img2, #img-trabalho {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.box3 h2, .box5 h1, .box9 h1 {
+    font-weight: 800;
+    font-size: 2.4rem;
+    background: linear-gradient(90deg, var(--accent-color), #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-align: left; /* Alinha os títulos principais das abas à esquerda */
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.box3 h2 {
+    /* Adiciona uma transição suave para o efeito de hover */
+    transition: filter 0.3s ease-in-out;
+}
+
+.box3 h2:hover {
+    /* Aplica um brilho ao redor do texto */
+    filter: drop-shadow(0 0 8px var(--accent-color));
+}
+
+.box3 p {
+    transition: filter 0.3s ease-in-out;
+}
+
+.box3 p:hover {
+    filter: drop-shadow(0 0 5px var(--accent-color));
+}
+
+.box3 p, .box5 p, .box9 .sobre-texto p {
+    text-align: left;
+    font-size: 1.05rem;
+    color: #d1d1d1;
+    margin-bottom: 1.2rem;
+}
+
+.box3 p {
+    border-left: 3px solid var(--accent-color);
+    padding-left: 1rem;
+}
+
+.sobre-texto {
+    border-left: 3px solid var(--accent-color);
+    padding-left: 1rem;
+}
+
+/* Seções de Conteúdo */
+.box3, .box5, .box6, .box7, .box9 {
+    padding: 1.5rem;
+    background-color: var(--card-bg-color);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+/* Layout Sobre Mim */
+.sobre-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* Carrossel Principal de Seções */
+.main-carousel {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    overflow-y: auto; /* Permite rolagem vertical interna se necessário */
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent-color) transparent;
+    background: linear-gradient(145deg, #252525, #1e1e1e);
+    scroll-padding: 1rem;
+    border: 1px solid var(--accent-color);
+    border-radius: 16px;
+    padding: 1rem;
+    box-shadow: 0 8px 25px rgba(0, 191, 165, 0.15);
+    height: 100%; /* Ocupa a altura disponível na linha do grid */
+}
+
+.main-carousel::-webkit-scrollbar {
+    height: 8px;
+}
+
+.main-carousel::-webkit-scrollbar-thumb {
+    background-color: var(--accent-color);
+    border-radius: 4px;
+}
+
+.main-carousel > div {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+}
+
+/* Listas (Hobbies e Formação) - Grid Layout (Wrap) */
+.carousel-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 0;
+    list-style: none;
+}
+
+.carousel-list li {
+    flex: 1 1 200px; /* Flexível para preencher espaço */
+    max-width: 300px;
+    min-height: 140px;
+    background: linear-gradient(145deg, #252525, #1e1e1e);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+    color: var(--text-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-list li:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-color);
+    box-shadow: 0 8px 25px rgba(0, 191, 165, 0.15);
+    background: #2c2c2c;
+}
+
+/* Rodapé */
+.box10 {
+    background-color: #111;
+    color: var(--white);
+    padding: 0.8rem; /* Reduz padding para economizar espaço */
+    margin-top: auto;
 }
 
 #rodape {
-    font-size: 1.3vw;    
-    justify-content:space-between; 
-    padding: 1vw;   
-}
-  
- /* RELACIOADO AO PASSAR EM CIMA DOS LINKS MUDAR DE COR*/
-a,        
-a:link {
-    color:  rgba(51, 30, 11, 0.722);
-    text-decoration: none;
-    text-decoration-color: black;
-    padding: 0.6vw 1vw;
-    border: none;
-}
-a:visited{
-    color:rgba(51, 30, 11, 0.722);
-}
-a:hover {
-    border: none;    
-    background-color: rgba(51, 30, 11, 0.722);
-    color: white;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
 }
 
-/* PARTE DA FUNÇÃO SAIBA MAIS, ONDE FAZ QUE PARTE DO TEXTO SELECIONADO FIQUE ESCONDIDO */
-#mais{
-    display: none;
+#rodape a {
+    color: var(--accent-color);
+    font-size: 0.9rem;
 }
- /*BOTÃO SAIBA MAIS */
-#LeiaMais{
-    padding: 0.5vw;
-    font-size: 0.8vw;
-    float:center;
-    border: none;     
-    border-radius: 10px;    
-} 
 
-/* Todo codigo abaixo Responsivel para Celular*/
-@media screen and (max-width: 768px) {
+#rodape a:hover {
+    color: var(--white);
+}
+
+/* Responsividade Desktop */
+@media (min-width: 1024px) {
     body {
-        font-size: 3vw;        
+        height: 100vh; /* Fixa a altura apenas no Desktop */
+        overflow: hidden; /* Remove rolagem da janela principal no Desktop */
     }
 
-    h1 {           
-        font-size: 4vw;
+    .container {
+        height: 100%; /* Container ocupa toda a tela */
+        grid-template-columns: 1fr 300px; /* Coluna 1 flexível, Coluna 2 fixa (Sidebar) */
+        grid-template-rows: auto 1fr auto; /* Retoma a estrutura fixa de 3 linhas */
     }
 
-    h2{
-        font-size: 4vw;
-    }   
-    
-    ul {
-        font-size: 3vw;        
-    }
-      
-    .box1{
-        font-size: 4.2vw;
+    /* Itens de largura total */
+    .box1, .box2, .box10 {
+        grid-column: 1 / -1;
     }
 
-    /*menu Nav */
-    .menu{      
-        font-size: 3vw; 
-        padding-left: 2vw; 
-        padding: 2vw;
-        justify-content: center;                                  
-    } 
-
-    /* Imagem Homem */
-    .box4{
-        grid-column-start: 1;
-        grid-column-end: 6;
-        grid-row-start: 3;
-        grid-row-end: 7;                    
-    }
-   
-    #img1{            
-        width: 50%;
-        margin-top: 3%;        
+    /* Sidebar (Imagem + Contato) */
+    .box4 { 
+        grid-column: 2 / 3; 
+        grid-row: 2; 
+        height: 100%; /* Preenche a altura disponível na linha do grid */
+        overflow-y: auto; /* Permite rolar a sidebar se for muito alta */
     }
 
-    /*  Informaçoes ao lado da foto */
-    .box3 {      
-        justify-content: center;
-        grid-column-start: 1;
-        grid-column-end: 6;
-        grid-row-start: 6;
-        grid-row-end: 7; 
-        margin-top: 17%;        
-        margin-left: 5%;                    
+    /* Conteúdo Principal (Texto, Trabalho, Hobbies, etc) */
+    .main-carousel { 
+        grid-column: 1 / 2; 
+        height: 100%; /* Preenche a altura disponível na linha do grid */
     }
 
-    /*    Trabalho */
-    .box5{
-        grid-column-start: 1;
-        grid-column-end: 6;
-        grid-row-start: 10;
-        grid-row-end: 11;         
-    } 
-
-    /*Hobbie*/
-    .box6 {
-        grid-column-start: 1;
-        grid-column-end: 3;
-        grid-row-start: 12;
-        grid-row-end: 17;  
-        font-size: 4vw;        
-    }
-
-    /*Formação*/
-    .box7 {
-        grid-column-start: 3;
-        grid-column-end: 6;
-        grid-row-start: 12;
-        grid-row-end:17;  
-        font-size: 4vw;
-        margin-right:5%;        
-    }
-
-    /* Sobre mim */
-    .box9 {
-        grid-column-start: 1;
-        grid-column-end: 6;
-        grid-row-start: 18;
-        grid-row-end: 25;
-        margin-left: 5%;  
-        margin-right: 6%;
-    }   
-    
-    /*Botao sobre min/Leia mais */
-    #LeiaMais{
-        font-size: 2vw;
-        float:right;
-        border: none;     
-        border-radius: 10px;
-        margin-bottom: 20px;    
-    }  
-        
-    /* Contato */
-    .box8{
-        grid-column-start: 1;
-        grid-column-end: 6;
-        grid-row-start: 25;
-        grid-row-end: 26;  
-        text-align: center;
-        display: inline;                 
-    } 
-
-    /* Tfoot/ rodape */
-   .box10 {
-        grid-column-start: 1;
-        grid-column-end: 6;
-        grid-row-start: 18;
-        grid-row-end: 25;  
-        background-color: white;
-    }
-
-    #rodape {
-        font-size: 3vw;    
-        justify-content:center; 
-        padding: 2vw;    
+    /* Sobre Mim Lado a Lado */
+    .sobre-container {
+        flex-direction: row;
+        align-items: flex-start;
+        text-align: left;
     }
 }
