@@ -52,7 +52,7 @@ ul { list-style: none; }
     max-width: 1200px;
     margin: 0 auto;
     background-color: transparent;
-    padding-bottom: 0;
+    padding-bottom: 80px; /* Espaço para o menu inferior no mobile */
 }
 
 /* Header */
@@ -87,29 +87,45 @@ h1.box1:hover {
     z-index: 1000;
     box-shadow: var(--shadow);
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* Centraliza titulo no mobile */
     align-items: center;
-    padding: 0 2rem;
+    padding: 0 1rem;
     flex-wrap: wrap;
+}
+
+/* Menu Inferior Mobile */
+.box2 nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(44, 44, 44, 0.95);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid var(--accent-color);
+    padding: 0.5rem 0;
+    z-index: 1001;
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.5);
 }
 
 .menu {
     display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    padding: 1rem;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    gap: 0;
+    padding: 0;
 }
 
 .menu li a {
     color: var(--text-color);
     font-weight: 600;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
+    padding: 0.5rem;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    text-align: center;
 }
 
 .menu li a:hover {
-    background-color: var(--accent-color);
-    color: var(--bg-color);
+    color: var(--accent-color);
 }
 
 /* Seção (Imagem e Texto) */
@@ -321,14 +337,16 @@ h1.box1:hover {
 /* Responsividade Desktop */
 @media (min-width: 1024px) {
     body {
-        height: 100vh; /* Fixa a altura apenas no Desktop */
-        overflow: hidden; /* Remove rolagem da janela principal no Desktop */
+        height: auto;
+        overflow-y: auto;
     }
 
     .container {
-        height: 100%; /* Container ocupa toda a tela */
+        height: auto;
+        min-height: 100vh;
         grid-template-columns: 1fr 300px; /* Coluna 1 flexível, Coluna 2 fixa (Sidebar) */
         grid-template-rows: auto 1fr auto; /* Retoma a estrutura fixa de 3 linhas */
+        padding-bottom: 0; /* Remove padding do menu mobile */
     }
 
     /* Itens de largura total */
@@ -340,14 +358,13 @@ h1.box1:hover {
     .box4 { 
         grid-column: 2 / 3; 
         grid-row: 2; 
-        height: 100%; /* Preenche a altura disponível na linha do grid */
-        overflow-y: auto; /* Permite rolar a sidebar se for muito alta */
+        height: auto;
     }
 
     /* Conteúdo Principal (Texto, Trabalho, Hobbies, etc) */
     .main-carousel { 
         grid-column: 1 / 2; 
-        height: 100%; /* Preenche a altura disponível na linha do grid */
+        height: auto;
     }
 
     /* Sobre Mim Lado a Lado */
@@ -355,5 +372,39 @@ h1.box1:hover {
         flex-direction: row;
         align-items: flex-start;
         text-align: left;
+    }
+
+    /* Restaura Menu Desktop */
+    .box2 {
+        justify-content: space-between;
+        padding: 0 2rem;
+    }
+
+    .box2 nav {
+        position: static;
+        width: auto;
+        background-color: transparent;
+        backdrop-filter: none;
+        border-top: none;
+        padding: 0;
+        box-shadow: none;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 1.5rem;
+        padding: 1rem;
+    }
+
+    .menu li a {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+    }
+
+    .menu li a:hover {
+        background-color: var(--accent-color);
+        color: var(--bg-color);
     }
 }
