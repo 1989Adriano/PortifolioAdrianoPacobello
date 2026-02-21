@@ -364,16 +364,15 @@ h1.box1:hover {
     .box4 { 
         grid-column: 2 / 3; 
         grid-row: 2; 
-        height: 60vh; /* Altura fixa para diminuir e igualar ao carrossel */
+        height: 40vh; /* Altura fixa e igual para ambos (Sidebar e Carrossel) */
         overflow-y: auto;
     }
 
     /* Conteúdo Principal (Texto, Trabalho, Hobbies, etc) */
     .main-carousel { 
         grid-column: 1 / 2; 
-        height: 60vh; /* Altura fixa para diminuir e igualar a sidebar */
+        height: 40vh; /* Altura fixa e igual para ambos */
         overflow-y: auto;
-        align-items: flex-start; /* Impede que os cards estiquem para a altura do maior card */
     }
 
     /* Sobre Mim Lado a Lado */
@@ -387,6 +386,8 @@ h1.box1:hover {
     .box2 {
         justify-content: space-between;
         padding: 0 2rem;
+        width: 100vw;
+        margin-left: calc(50% - 50vw);
     }
 
     .box2 nav {
