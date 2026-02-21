@@ -405,59 +405,102 @@ h1.box1:hover {
     }
 }
 
-/* Ajuste específico para Mobile (telas menores que 1024px) */
+/* --- CONFIGURAÇÃO COMPLETA PARA CELULAR (Mobile) --- */
 @media (max-width: 1023px) {
+    /* 1. Estrutura do Container */
     .container {
         display: flex;
         flex-direction: column;
+        gap: 2rem;
         margin-top: 10px; 
     }
 
-    .box4 {
-        order: -1; /* Mantém ela logo abaixo do nome/menu */
-        
-        /* ESPAÇAMENTO E PADDING GRANDES */
-        margin-top: 5rem;      /* Empurra a foto bem para baixo do nome Adriano */
-        padding: 3rem 1rem;    /* Padding grande em cima e embaixo dentro da box */
-        
-        margin-bottom: 2rem;   /* Espaço entre a foto e o carrossel */
-        width: 95%;           
-        align-self: center;    
-        text-align: center;
-        background: linear-gradient(145deg, #252525, #1e1e1e);
-        border: 1px solid var(--accent-color);
-        border-radius: 16px;
-    }
-
-    /* Ajuste na imagem para ficar harmoniosa com o padding novo */
-    #img1 {
-        width: 160px;
-        height: 160px;
-        margin-bottom: 1rem;
-    }
-     /* Faz o header grudar no topo e diminuir a altura */
+    /* 2. Cabeçalho Fixo (Sticky) */
     .box2 {
         position: sticky;
         top: 0;
-        padding: 0.5rem; /* Reduz o padding original */
+        padding: 0.5rem;
         transition: all 0.4s ease-in-out;
         min-height: 60px;
+        z-index: 1100;
+        background-color: var(--card-bg-color);
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     }
 
-    /* Faz o seu NOME diminuir de tamanho e ocupar menos espaço vertical */
+    /* 3. Nome que Minimiza ao Clicar */
     h1.box1 {
-        font-size: 1.2rem; /* Diminui de 1.8rem para 1.2rem */
-        padding: 0.5rem 0;
+        font-size: 1.8rem; /* Tamanho inicial grande */
+        padding: 0.8rem 0;
         margin: 0;
-        transition: font-size 0.3s ease;
-        white-space: nowrap; /* Impede que o nome quebre em duas linhas */
+        transition: all 0.4s ease-in-out; /* Suaviza a transição ao clicar */
+        cursor: pointer;
+        text-align: center;
+        width: 100%;
+        white-space: nowrap; 
         overflow: hidden;
-        text-overflow: ellipsis; /* Se for muito grande, coloca "..." */
+        text-overflow: ellipsis;
     }
 
-    /* Ajuste para o container não "bater" no header minimizado */
-    .container {
-        margin-top: 20px;
+    /* ESTADO MINIMIZADO (Ativado via clique) */
+    h1.box1.clicado {
+        font-size: 1.1rem; /* Fica pequeno ao ser clicado */
+        padding: 0.3rem 0;
+        color: var(--accent-color);
+    }
+
+    /* 4. Separação da Foto e Contato no Mobile */
+    .box4 {
+        display: contents; /* "Quebra" a caixa para movermos a foto e o contato separadamente */
+    }
+
+    /* Foto de Perfil (Fica no topo com espaço grande) */
+    .box4 aside {
+        order: -1; 
+        margin-top: 5rem;      /* ESPAÇO GRANDE ENTRE O NOME E A FOTO */
+        padding: 3rem 1rem;    /* Padding interno grande */
+        display: flex;
+        justify-content: center;
+        background: linear-gradient(145deg, #252525, #1e1e1e);
+        border: 1px solid var(--accent-color);
+        border-radius: 16px;
+        width: 95%;
+        align-self: center;
+    }
+
+    #img1 {
+        width: 160px;
+        height: 160px;
+        border-radius: 50%;
+        border: 5px solid var(--accent-color);
+    }
+
+    /* Bloco de Contato (Vai para o FINAL da página no mobile) */
+    .box-contact {
+        order: 10; /* Joga para baixo do carrossel */
+        background-color: var(--card-bg-color);
+        padding: 2rem;
+        border-radius: 16px;
+        border: 1px solid var(--accent-color);
+        width: 90%;
+        align-self: center;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    /* 5. Carrossel de Conteúdo */
+    .main-carousel {
+        order: 0; /* Fica no meio entre a foto e o contato */
+        margin: 0 1rem;
+        min-height: 400px;
+    }
+
+    /* Menu Inferior Fixo */
+    .box2 nav {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 1200;
     }
 }
+
 
