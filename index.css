@@ -356,22 +356,20 @@ h1.box1:hover {
 
     .box10 {
         grid-column: 1 / -1;
-        width: 100vw; /* Ocupa toda a largura da janela */
-        margin-left: calc(50% - 50vw); /* Garante que o footer pegue de ponta a ponta */
     }
 
     /* Sidebar (Imagem + Contato) */
     .box4 { 
         grid-column: 2 / 3; 
         grid-row: 2; 
-        height: 40vh; /* Altura fixa e igual para ambos (Sidebar e Carrossel) */
+        height: 50vh; /* Altura fixa e igual para ambos (Sidebar e Carrossel) */
         overflow-y: auto;
     }
 
     /* Conteúdo Principal (Texto, Trabalho, Hobbies, etc) */
     .main-carousel { 
         grid-column: 1 / 2; 
-        height: 40vh; /* Altura fixa e igual para ambos */
+        height: 50vh; /* Altura fixa e igual para ambos */
         overflow-y: auto;
     }
 
@@ -386,8 +384,6 @@ h1.box1:hover {
     .box2 {
         justify-content: space-between;
         padding: 0 2rem;
-        width: 100vw;
-        margin-left: calc(50% - 50vw);
     }
 
     .box2 nav {
