@@ -405,54 +405,35 @@ h1.box1:hover {
     }
 }
 
-
-/* Ajustes apenas para Celular (até 1023px) */
+/* Ajuste específico para Mobile (telas menores que 1024px) */
 @media (max-width: 1023px) {
-    /* 1. Faz o container principal empilhar os blocos */
     .container {
         display: flex;
         flex-direction: column;
-        gap: 2rem;
+        margin-top: 10px; 
     }
 
-    /* 2. O TRUQUE: 'contents' faz a box4 "sumir" visualmente, 
-          deixando a Imagem e o Contato soltos para movermos individualmente */
     .box4 {
-        display: contents; 
-    }
-
-    /* 3. A Foto: Jogamos para o topo (abaixo do nome) com um respiro */
-    .box4 aside {
-        order: -1; 
-        display: flex;
-        justify-content: center;
-        margin-top: 3rem; /* Espaço generoso entre Nome e Foto */
-        margin-bottom: 1rem;
-    }
-
-    /* 4. O Contato: Jogamos para o final de tudo (abaixo do carrossel) */
-    .box-contact {
-        order: 10; /* Valor alto para garantir que fique por último */
-        background-color: var(--card-bg-color);
-        padding: 2rem;
-        border-radius: 16px;
-        border: 1px solid var(--accent-color);
-        width: 90%;
-        align-self: center;
+        order: -1; /* Mantém ela logo abaixo do nome/menu */
+        
+        /* ESPAÇAMENTO E PADDING GRANDES */
+        margin-top: 5rem;      /* Empurra a foto bem para baixo do nome Adriano */
+        padding: 3rem 1rem;    /* Padding grande em cima e embaixo dentro da box */
+        
+        margin-bottom: 2rem;   /* Espaço entre a foto e o carrossel */
+        width: 95%;           
+        align-self: center;    
         text-align: center;
+        background: linear-gradient(145deg, #252525, #1e1e1e);
+        border: 1px solid var(--accent-color);
+        border-radius: 16px;
     }
 
-    /* 5. Ajuste no Carrossel para ele ficar entre a foto e o contato */
-    .main-carousel {
-        order: 0;
-        margin: 0 1rem;
-    }
-}
-
-/* No Desktop (acima de 1024px), tudo volta ao normal automaticamente */
-@media (min-width: 1024px) {
-    .box4 {
-        display: flex; /* Restaura o layout original da barra lateral */
+    /* Ajuste na imagem para ficar harmoniosa com o padding novo */
+    #img1 {
+        width: 160px;
+        height: 160px;
+        margin-bottom: 1rem;
     }
 }
 
