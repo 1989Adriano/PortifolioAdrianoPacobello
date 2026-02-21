@@ -342,14 +342,14 @@ h1.box1:hover {
     .container {
         height: auto;
         grid-template-columns: 1fr 300px; /* Coluna 1 flexível, Coluna 2 fixa (Sidebar) */
-        grid-template-rows: auto 1fr auto; /* Retoma a estrutura fixa de 3 linhas */
+        grid-template-rows: 1fr; /* Apenas uma linha, já que menu e footer estão fora */
         padding-bottom: 0; /* Remove padding do menu mobile */
     }
 
     /* Sidebar (Imagem + Contato) */
     .box4 { 
         grid-column: 2 / 3; 
-        grid-row: 2; 
+        grid-row: 1; /* Move para a primeira linha para alinhar com o carrossel */
         height: 85vh; /* Aumenta a altura para ocupar mais espaço na tela */
         overflow-y: auto;
     }
@@ -357,6 +357,7 @@ h1.box1:hover {
     /* Conteúdo Principal (Texto, Trabalho, Hobbies, etc) */
     .main-carousel { 
         grid-column: 1 / 2; 
+        grid-row: 1; /* Garante que fique na mesma linha da sidebar */
         height: 85vh; /* Aumenta a altura para ocupar mais espaço na tela */
         overflow-y: auto;
     }
