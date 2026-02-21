@@ -405,35 +405,35 @@ h1.box1:hover {
     }
 }
 
-/* --- CONFIGURAÇÃO COMPLETA PARA CELULAR (Mobile) --- */
+/* --- CONFIGURAÇÃO PARA CELULAR (Mobile) --- */
 @media (max-width: 1023px) {
-    /* 1. Estrutura do Container */
     .container {
         display: flex;
         flex-direction: column;
-        gap: 2rem;
+        gap: 1.5rem;
         margin-top: 10px; 
     }
 
-    /* 2. Cabeçalho Fixo (Sticky) */
+    /* 1. Cabeçalho e Nome (Tamanho Reduzido fixo) */
     .box2 {
         position: sticky;
         top: 0;
-        padding: 0.5rem;
-        transition: all 0.4s ease-in-out;
-        min-height: 60px;
+        padding: 0.4rem; /* Padding bem pequeno para alinhar com o menu */
+        min-height: 50px;
         z-index: 1100;
         background-color: var(--card-bg-color);
-        box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        border-bottom: 1px solid var(--accent-color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
-    /* 3. Nome que Minimiza ao Clicar */
     h1.box1 {
-        font-size: 1.8rem; /* Tamanho inicial grande */
-        padding: 0.8rem 0;
+        /* Tamanho reduzido para combinar com o menu */
+        font-size: 1rem; 
+        font-weight: 700;
+        padding: 0;
         margin: 0;
-        transition: all 0.4s ease-in-out; /* Suaviza a transição ao clicar */
-        cursor: pointer;
         text-align: center;
         width: 100%;
         white-space: nowrap; 
@@ -441,66 +441,41 @@ h1.box1:hover {
         text-overflow: ellipsis;
     }
 
-    /* ESTADO MINIMIZADO (Ativado via clique) */
-    h1.box1.clicado {
-        font-size: 1.1rem; /* Fica pequeno ao ser clicado */
-        padding: 0.3rem 0;
-        color: var(--accent-color);
-    }
-
-    /* 4. Separação da Foto e Contato no Mobile */
+    /* 2. Foto de Perfil (Fica no topo com PADDING grande) */
     .box4 {
-        display: contents; /* "Quebra" a caixa para movermos a foto e o contato separadamente */
-    }
-
-    /* Foto de Perfil (Fica no topo com espaço grande) */
-    .box4 aside {
         order: -1; 
-        margin-top: 5rem;      /* ESPAÇO GRANDE ENTRE O NOME E A FOTO */
-        padding: 3rem 1rem;    /* Padding interno grande */
+        margin-top: 4rem;      /* Espaço entre o nome pequeno e a foto */
+        padding: 4rem 1rem;    /* PADDING GRANDE dentro da caixa da foto */
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+        align-items: center;
         background: linear-gradient(145deg, #252525, #1e1e1e);
         border: 1px solid var(--accent-color);
         border-radius: 16px;
-        width: 95%;
+        width: 92%;
         align-self: center;
+        text-align: center;
     }
 
     #img1 {
-        width: 160px;
-        height: 160px;
-        border-radius: 50%;
-        border: 5px solid var(--accent-color);
+        width: 140px;
+        height: 140px;
+        margin-bottom: 1.5rem;
     }
 
-    /* Bloco de Contato (Vai para o FINAL da página no mobile) */
+    /* 3. Contatos (Dentro da box4 no mobile para organização) */
     .box-contact {
-        order: 10; /* Joga para baixo do carrossel */
-        background-color: var(--card-bg-color);
-        padding: 2rem;
-        border-radius: 16px;
-        border: 1px solid var(--accent-color);
-        width: 90%;
-        align-self: center;
-        text-align: center;
-        margin-bottom: 40px;
+        width: 100%;
+        font-size: 0.9rem;
     }
 
-    /* 5. Carrossel de Conteúdo */
+    /* 4. Carrossel de Conteúdo */
     .main-carousel {
-        order: 0; /* Fica no meio entre a foto e o contato */
+        order: 0;
         margin: 0 1rem;
-        min-height: 400px;
-    }
-
-    /* Menu Inferior Fixo */
-    .box2 nav {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        z-index: 1200;
+        padding-bottom: 80px; /* Espaço para o menu fixo inferior não cobrir o texto */
     }
 }
+
 
 
