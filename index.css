@@ -337,13 +337,12 @@ h1.box1:hover {
 /* Responsividade Desktop */
 @media (min-width: 1024px) {
     body {
-        height: auto;
-        overflow-y: auto;
+        height: 100vh;
+        overflow: hidden;
     }
 
     .container {
-        height: auto;
-        min-height: 100vh;
+        height: 100%;
         grid-template-columns: 1fr 300px; /* Coluna 1 flexível, Coluna 2 fixa (Sidebar) */
         grid-template-rows: auto 1fr auto; /* Retoma a estrutura fixa de 3 linhas */
         padding-bottom: 0; /* Remove padding do menu mobile */
@@ -358,13 +357,14 @@ h1.box1:hover {
     .box4 { 
         grid-column: 2 / 3; 
         grid-row: 2; 
-        height: auto;
+        height: 100%;
+        overflow-y: auto;
     }
 
     /* Conteúdo Principal (Texto, Trabalho, Hobbies, etc) */
     .main-carousel { 
         grid-column: 1 / 2; 
-        height: auto;
+        height: 100%;
     }
 
     /* Sobre Mim Lado a Lado */
