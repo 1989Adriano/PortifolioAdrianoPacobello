@@ -404,3 +404,23 @@ h1.box1:hover {
         color: var(--bg-color);
     }
 }
+
+/* Ajuste para Versão Celular (Mobile) */
+@media (max-width: 1023px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* O nome já está no topo (box2), agora forçamos a box4 a ser o segundo item */
+    .box4 {
+        order: -1; /* Joga para o topo do container, logo após o header/box2 */
+        margin-bottom: 1rem;
+        width: 100%;
+    }
+
+    /* Garante que o carrossel venha depois da foto no mobile */
+    .main-carousel {
+        order: 0;
+    }
+}
