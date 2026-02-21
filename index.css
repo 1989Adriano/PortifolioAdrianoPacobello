@@ -349,30 +349,19 @@ h1.box1:hover {
         padding-bottom: 0; /* Remove padding do menu mobile */
     }
 
-    /* Itens de largura total */
-    .box1, .box2 {
-        grid-column: 1 / -1;
-    }
-
-    .box10 {
-        grid-column: 1 / -1;
-        width: 100vw;
-        margin-left: calc(50% - 50vw);
-    }
-
     /* Sidebar (Imagem + Contato) */
     .box4 { 
         grid-column: 2 / 3; 
         grid-row: 2; 
-        height: auto;
-        overflow-y: visible;
+        height: 85vh; /* Aumenta a altura para ocupar mais espaço na tela */
+        overflow-y: auto;
     }
 
     /* Conteúdo Principal (Texto, Trabalho, Hobbies, etc) */
     .main-carousel { 
         grid-column: 1 / 2; 
-        height: auto;
-        overflow-y: visible;
+        height: 85vh; /* Aumenta a altura para ocupar mais espaço na tela */
+        overflow-y: auto;
     }
 
     /* Sobre Mim Lado a Lado */
@@ -386,8 +375,6 @@ h1.box1:hover {
     .box2 {
         justify-content: space-between;
         padding: 0 2rem;
-        width: 100vw;
-        margin-left: calc(50% - 50vw);
     }
 
     .box2 nav {
